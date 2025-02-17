@@ -115,8 +115,18 @@
                                     responsive: true,
                                     margin: { r: 0, t: 0, b: 0, l: 0 }
                                 };
+                                 var config = {
+                                    toImageButtonOptions: {
+                                        format: 'svg', // one of png, svg, jpeg, webp
+                                        filename: 'Bridge2AI Scholar Map',
+                                        width: 800,
+                                        height: 600,
+                                        scale: 1, // Multiply title and axis labels by this factor
+                                        linkText: 'Download Image',
+                                    },
+                                };
 
-                                Plotly.newPlot("myDiv1", data, layout);})
+                                Plotly.newPlot("myDiv1", data, layout, config);})
                 </script>
 
                  
