@@ -5,7 +5,7 @@
         <meta name="viewpoint" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/plotly_notes_styles.css">
         <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-        <script href="myScript07.js" defer></script>
+        <script src="https://github.com/Dean-D-Wang/Dean-D-Wang.github.io/blob/main/myScript07.js" defer></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
 
 
@@ -66,73 +66,6 @@
                     </button>
                 </div>
 
-
-<script>
-    function myPlot15() { //replot the ISHR Speaker Distribution Map with the "open-street-map" tiles
-  d3.csv(
-	"https://raw.githubusercontent.com/Dean-D-Wang/Plotly-JS-Practices/refs/heads/main/Datasets/bridge2AI-schoars-distribution.csv",
-	function(err, rows) {
-		function unpack(rows, key) {
-			return rows.map(function(row) {
-				return row[key];
-			});
-    }
-    //var numbersOfSpeakers = unpack(rows,"scholars");
-    console.log(unpack(rows, "scholars"));
-    console.log(unpack(rows, "city"));
-		var data = [
-			{
-				type: "scattermap",
-        text: unpack(rows, "city"),
-        
-
-				lon: unpack(rows, "long"),
-				lat: unpack(rows, "lat"),
-        marker: {
-          //color: "fuchsia",
-          color: "rgba(115, 112, 250, 0.8)", //set the color of the markers to fuchsia
-      
-          size: unpack(rows, "scholars"),
-          sizemode: "area",
-          sizeref: 0.01,
-        
-        },
-        hovertemplate: '<b>%{text}</b><br>Scholars: %{marker.size}<extra></extra>',
-			}
-		];
-
-		var layout = {
-      //dragmode: "zoom",
-     dragmode: "pan",
-      map: {
-        style: "open-street-map",  //open-street-map tiles
-        //style: "carto-dark-matter",  //dark-matter tiles
-        //style: "carto-positron",  //light-matter tiles
-        //style: "carto-positron-nolabels",  //light-matter tiles without labels
-       // style: "stamen-toner",  //toner tiles
-        //style: "stamen-watercolor",  //watercolor tiles
-        //style: "stamen-terrain",  //terrain tiles
-        //style: "stamen-terrain-background",  //terrain background tiles
-        //style: "stamen-terrain-labels",  //terrain labels tiles
-        //style: "stamen-terrain-lite",  //terrain lite tiles
-        //style: "stamen-toner-lite",  //toner lite tiles
-        center: { lat: 38, lon: -110 }, zoom: 2.5
-
-      },
-      showlegend: false,
-      width: 1200,
-      height: 800,
-      //autosize: false,
-      responsive: true,
-			margin: { r: 0, t: 0, b: 0, l: 0 }
-		};
-
-		Plotly.newPlot("myDiv15", data, layout);
-	});
-
-}
-</script>
-
-                      
+                 
     </body>
 </html>
