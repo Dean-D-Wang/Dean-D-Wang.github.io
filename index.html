@@ -3,7 +3,7 @@
         <title>Bridge2AI TRM-WG Web Assets</title>
         <meta charset="utf-8">
         <meta name="viewpoint" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/plotly_notes_styles.css">
+        <link rel="stylesheet" href="/Users/dingwang/my-workspace/Python-LearningSpace/Code Practices/Plotly Notes/plotly_notes_styles.css">
         <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
 
@@ -15,9 +15,9 @@
         
         <div class="toolbar" role="banner">
             <img width="40" alt="Training Logo"
-                src="https://raw.githubusercontent.com/Dean-D-Wang/Dean-D-Wang.github.io/refs/heads/main/assets/Bridge2AI-TRM-WG.png">
+                src="./assets/images/Bridge2AI-Training Logo-Round C-white background.png">
             <!-- src="https://www.pngfind.com/pngs/m/294-2944006_redfin-logo-png-research-house-icon-transparent-png.png" /> -->
-            <span>Welcome to the collection of Bridge2AI TRM-WG Mentor-Mentee Network</span>
+            <span>Welcome to the Bridge2AI TRM-WG Mentor-Mentee Network</span>
         
             <div class="spacer"></div>
             <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular"
@@ -47,16 +47,17 @@
                 </svg>
             </a>
             
+            
         </div>
         
-            <div class="content" role="main"></div>
+        <div class="content" role="main">
 
             <h2 style="text-align: center;"> Bridge2AI Scholars Network </h2>
-            <h3>Replot the Bridge2AI Scholar Distribution using the OpenStreetMap tiles </li>
+            <h3 style="text-align: center">Replot the Bridge2AI Scholar Distribution using the OpenStreetMap tiles </li>
                 
-            <div id="myDiv1"></div>
+            <span style="margin:auto" id ="myDiv1"></span>
                 
-
+        </div>
                 <script>
                     d3.csv(
                             "https://raw.githubusercontent.com/Dean-D-Wang/Plotly-JS-Practices/refs/heads/main/Datasets/bridge2AI-schoars-distribution.csv",
@@ -79,11 +80,11 @@
                                         lat: unpack(rows, "lat"),
                                         marker: {
                                             //color: "fuchsia",
-                                            color: "rgba(115, 112, 250, 0.8)", //set the color of the markers to fuchsia
-
+                                            //color: "rgba(115, 112, 250, 0.8)", //set the color of the markers to fuchsia
+                                            color: "rgb(203,14,226,0.6)",
                                             size: unpack(rows, "scholars"),
                                             sizemode: "area",
-                                            sizeref: 0.01,
+                                            sizeref: 0.003,
 
                                         },
                                         hovertemplate: '<b>%{text}</b><br>Scholars: %{marker.size}<extra></extra>',
@@ -91,8 +92,9 @@
                                 ];
 
                                 var layout = {
-                                    //dragmode: "zoom",
-                                    dragmode: "pan",
+                                    
+                                    dragmode: "zoom",
+                                    //dragmode: "pan",
                                     map: {
                                         style: "open-street-map",  //open-street-map tiles
                                         //style: "carto-dark-matter",  //dark-matter tiles
@@ -105,21 +107,22 @@
                                         //style: "stamen-terrain-labels",  //terrain labels tiles
                                         //style: "stamen-terrain-lite",  //terrain lite tiles
                                         //style: "stamen-toner-lite",  //toner lite tiles
-                                        center: { lat: 38, lon: -110 }, zoom: 2.5
+                                        center: { lat: 38, lon: -97 }, zoom: 3.5
 
                                     },
                                     showlegend: false,
-                                    width: 1200,
-                                    height: 800,
+                                    width: 900,
+                                    height: 600,
                                     //autosize: false,
                                     responsive: true,
                                     margin: { r: 0, t: 0, b: 0, l: 0 }
                                 };
-                                 var config = {
+
+                                var config = {
                                     toImageButtonOptions: {
                                         format: 'svg', // one of png, svg, jpeg, webp
                                         filename: 'Bridge2AI Scholar Map',
-                                        width: 800,
+                                        width: 900,
                                         height: 600,
                                         scale: 1, // Multiply title and axis labels by this factor
                                         linkText: 'Download Image',
