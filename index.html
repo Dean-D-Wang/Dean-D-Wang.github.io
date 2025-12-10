@@ -1,52 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Bridge2AI TRM-WG Web Assets</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-        <!-- External CSS -->
-        <link rel="stylesheet" type="text/css" href="https://Dean-D-Wang.github.io/assets/styles.css">
-    
-        <!-- Plotly + D3 -->
-        <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-    
-        <style>
-            /* Minimal dropdown CSS added directly here (you can move to your stylesheet later) */
-    
-            .dropdown button {
-                padding: 6px 14px;
-                font-size: 14px;
-                background: #ffffff22;
-                color: white;
-                border: 1px solid white;
-                border-radius: 6px;
-                cursor: pointer;
-            }
-    
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #ffffff;
-                min-width: 180px;
-                border-radius: 6px;
-                box-shadow: 0 2px 6px rgba(0,0,0,0.25);
-                z-index: 99;
-            }
-    
-            .dropdown-content a {
-                color: #000;
-                padding: 10px 14px;
-                text-decoration: none;
-                display: block;
-            }
-    
-            .dropdown-content a:hover {
-                background: #eee;
-            }
-        </style>
-    </head>
+<head>
+    <title>Bridge2AI TRM-WG Web Assets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Updated External CSS -->
+    <link rel="stylesheet" type="text/css" href="https://Dean-D-Wang.github.io/assets/styles_updated.css">
+
+    <!-- Plotly + D3 -->
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+</head>
 
 <body>
 
@@ -55,13 +20,13 @@
 <div class="toolbar" role="banner">
 
     <img width="40" alt="Training Logo"
-        src="https://dean-d-wang.github.io/assets/Bridge2AI-TRM-WG.png">
+         src="https://dean-d-wang.github.io/assets/Bridge2AI-TRM-WG.png">
 
     <span>Welcome to the Bridge2AI TRM-WG Mentor-Mentee Network</span>
 
     <div class="spacer"></div>
 
-    <!-- Social Icons (unchanged) -->
+    <!-- Social Icons -->
     <a href="https://twitter.com/angular" target="_blank" rel="noopener">
         <svg id="twitter-logo" height="24">...</svg>
     </a>
@@ -75,8 +40,8 @@
     </a>
 
     <!-- PROJECTS DROPDOWN -->
-    <div class="dropdown" style="position:relative; display:inline-block; margin-left:20px;">
-        <button id="dropdownBtn">Projects ▼</button>
+    <div class="dropdown" style="margin-left:20px;">
+        <button id="dropdownBtn" class="dropdown-button">Projects ▼</button>
 
         <div class="dropdown-content" id="dropdownMenu">
             <a href="/protein-turnovers/index_01.html">Protein Turnovers</a>
@@ -86,22 +51,23 @@
 
     <!-- HOME BUTTON -->
     <button onclick="location.href='/index.html'"
-        style="margin-left:20px; padding:6px 14px; font-size:14px; 
-               background:#ffffff22; color:white; border:1px solid white; 
-               border-radius:6px; cursor:pointer;">
+            class="toolbar-button"
+            style="margin-left:20px;">
         Home
     </button>
 
 </div>
 
+
 <!-- ************** MAIN CONTENT ************** -->
 
 <div class="content" role="main">
-    <h2 style="text-align: center;"> Bridge2AI Scholars Network </h2>
-    <h3 style="text-align: center">Replot the Bridge2AI Scholar Distribution using the OpenStreetMap tiles</h3>
+    <h2 style="text-align: center;">Bridge2AI Scholars Network</h2>
+    <h3 style="text-align: center;">Replot the Bridge2AI Scholar Distribution using OpenStreetMap tiles</h3>
 
     <span id="myDiv1" style="margin:auto"></span>
 </div>
+
 
 <!-- ************** PLOTLY MAP SCRIPT ************** -->
 <script>
@@ -116,64 +82,3 @@ d3.csv(
             {
                 type: "scattermap",
                 text: unpack(rows, "city"),
-                lon: unpack(rows, "long"),
-                lat: unpack(rows, "lat"),
-                marker: {
-                    color: "rgb(203,14,226,0.6)",
-                    size: unpack(rows, "scholars"),
-                    sizemode: "area",
-                    sizeref: 0.003,
-                },
-                hovertemplate: '<b>%{text}</b><br>Scholars: %{marker.size}<extra></extra>',
-            }
-        ];
-
-        var layout = {
-            dragmode: "zoom",
-            map: { style: "open-street-map", center: { lat: 38, lon: -97 }, zoom: 3.5 },
-            showlegend: false,
-            width: 900,
-            height: 600,
-            responsive: true,
-            margin: { r: 0, t: 10, b: 0, l: 0 }
-        };
-
-        var config = {
-            toImageButtonOptions: {
-                format: 'svg',
-                filename: 'Bridge2AI Scholar Map',
-                width: 900,
-                height: 600,
-                scale: 1,
-                linkText: 'Download Image',
-            },
-        };
-
-        Plotly.newPlot("myDiv1", data, layout, config);
-    }
-);
-</script>
-
-<!-- ************** DROPDOWN SCRIPT ************** -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.getElementById("dropdownBtn");
-    const menu = document.getElementById("dropdownMenu");
-
-    // Toggle menu on click
-    btn.addEventListener("click", () => {
-        menu.style.display = (menu.style.display === "block") ? "none" : "block";
-    });
-
-    // Close when clicking outside
-    document.addEventListener("click", (event) => {
-        if (!event.target.closest(".dropdown")) {
-            menu.style.display = "none";
-        }
-    });
-});
-</script>
-
-</body>
-</html>
-
