@@ -86,3 +86,19 @@ function myPlot1() {
         }
     );
 }
+
+<!-- ************** DROPDOWN SCRIPT ************** -->
+document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("dropdownBtn");
+    const menu = document.getElementById("dropdownMenu");
+
+    btn.addEventListener("click", () => {
+        menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!event.target.closest(".dropdown")) {
+            menu.style.display = "none";
+        }
+    });
+});
