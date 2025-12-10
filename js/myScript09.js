@@ -5,7 +5,7 @@ function myPlot1() {
     }
 
     d3.csv(
-        "https://raw.githubusercontent.com/Dean-D-Wang/Dean-D-Wang.github.io/refs/heads/main/ptm-predictions/prediction-results/combined_ptm_predictions_Q5S007.csv",
+        "https://raw.githubusercontent.com/Dean-D-Wang/Plotly-JS-Practices/refs/heads/main/Datasets/Combined%20PTM%20Predictions_Q5S007.csv",
         function(err, rows) {
             if (err) {
                 console.error("CSV load error:", err);
