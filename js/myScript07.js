@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdown = document.querySelector('.dropdown');
+    const content = dropdown.querySelector('.dropdown-content');
+
+    dropdown.addEventListener('mouseenter', () => {
+        content.style.display = 'block';
+    });
+
+    dropdown.addEventListener('mouseleave', () => {
+        content.style.display = 'none';
+    });
+});
+
 function myPlot1() {//Basic Radar Plot
     const data = [{
         type: 'scatterpolar',
