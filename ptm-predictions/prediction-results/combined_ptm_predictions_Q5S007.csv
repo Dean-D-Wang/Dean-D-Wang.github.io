@@ -1,4 +1,4 @@
-Site_Sequence,Probability Score,Combined PTM Type
+Site_Sequence,Probability_Score,Combined_PTM_Type
 2,0.639499311,Glyco
 2,0.758025213,Phos
 4,0.855444242,Phos
@@ -110,3 +110,4 @@ Site_Sequence,Probability Score,Combined PTM Type
 2467,0.890432189,Hydro
 2468,0.905930032,Hydro
 2469,0.819953014,Met_Oxi
+
