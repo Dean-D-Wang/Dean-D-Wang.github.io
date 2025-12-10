@@ -270,11 +270,13 @@ svg#clouds {
 /* ========================================================= */
 
 /* Modern text-only toolbar buttons */
-.toolbar-button {
+.toolbar-button,
+#dropdownBtn,
+#homeBtn {
     font-weight: 600;
     padding: 8px 14px;
     background: transparent;
-    color: white;
+    color: white !important;
     border: none;
     outline: none;
     cursor: pointer;
@@ -282,8 +284,19 @@ svg#clouds {
     transition: background 0.25s ease;
 }
 
-.toolbar-button:hover {
+/* Hover effect */
+.toolbar-button:hover,
+#dropdownBtn:hover,
+#homeBtn:hover {
     background: rgba(255, 255, 255, 0.18);
+}
+
+/* ▼ dropdown triangle — now white */
+#dropdownBtn::after {
+    content: " ▼";
+    font-size: 12px;
+    color: white;
+    padding-left: 4px;
 }
 
 /* Dropdown wrapper */
@@ -292,12 +305,13 @@ svg#clouds {
     display: inline-block;
 }
 
-/* Dropdown menu panel */
+/* Dropdown menu panel — now transparent with dark hover */
 .dropdown-content {
     display: none;
     position: absolute;
     top: 40px;
-    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    background: rgba(20, 20, 20, 0.3); /* <<< No more white */
     min-width: 180px;
     border-radius: 8px;
     box-shadow: 0 4px 14px rgba(0,0,0,0.25);
@@ -306,18 +320,19 @@ svg#clouds {
     animation: fadeIn 0.15s ease-out;
 }
 
-/* Dropdown links */
+/* Dropdown links – white text */
 .dropdown-content a {
     padding: 12px 14px;
     display: block;
-    color: #000 !important;
+    color: white !important;
     font-weight: 500;
     text-decoration: none;
     transition: background 0.2s ease;
 }
 
+/* Hover goes darker instead of light */
 .dropdown-content a:hover {
-    background: #e5e5e5;
+    background: rgba(0, 0, 0, 0.35);
 }
 
 /* Smooth fade animation */
