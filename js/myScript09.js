@@ -85,9 +85,9 @@ function myPlot1() {
             Plotly.newPlot("myDiv1", traces, layout);
         }
     );
-}
+};
 
-<!-- ************** DROPDOWN SCRIPT ************** -->
+// ************** DROPDOWN SCRIPT **************
 document.addEventListener("DOMContentLoaded", function () {
     const btn = document.getElementById("dropdownBtn");
     const menu = document.getElementById("dropdownMenu");
