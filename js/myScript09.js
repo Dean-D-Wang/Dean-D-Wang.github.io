@@ -16,7 +16,7 @@ function myPlot1() {
 
             // --- Define custom colors for each group ---
             const colors = [
-                "#50af49", "#1f77b4", "#a65728", "ef11ef", 
+                "#50af49", "#1f77b4", "#a65728", "#ef11ef", 
                 "#edaa15", "#15edcd", "#e377c2", "#7f7f7f",
                 "#bcbd22", "#17becf"
             ];
