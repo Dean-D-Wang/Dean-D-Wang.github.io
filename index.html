@@ -82,3 +82,62 @@ d3.csv(
             {
                 type: "scattermap",
                 text: unpack(rows, "city"),
+                lon: unpack(rows, "long"),
+                lat: unpack(rows, "lat"),
+                marker: {
+                    color: "rgb(203,14,226,0.6)",
+                    size: unpack(rows, "scholars"),
+                    sizemode: "area",
+                    sizeref: 0.003,
+                },
+                hovertemplate: '<b>%{text}</b><br>Scholars: %{marker.size}<extra></extra>',
+            }
+        ];
+
+        var layout = {
+            dragmode: "zoom",
+            map: { style: "open-street-map", center: { lat: 38, lon: -97 }, zoom: 3.5 },
+            showlegend: false,
+            width: 900,
+            height: 600,
+            responsive: true,
+            margin: { r: 0, t: 10, b: 0, l: 0 }
+        };
+
+        var config = {
+            toImageButtonOptions: {
+                format: 'svg',
+                filename: 'Bridge2AI Scholar Map',
+                width: 900,
+                height: 600,
+                scale: 1,
+                linkText: 'Download Image',
+            },
+        };
+
+        Plotly.newPlot("myDiv1", data, layout, config);
+    }
+);
+</script>
+
+
+<!-- ************** DROPDOWN SCRIPT ************** -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("dropdownBtn");
+    const menu = document.getElementById("dropdownMenu");
+
+    btn.addEventListener("click", () => {
+        menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!event.target.closest(".dropdown")) {
+            menu.style.display = "none";
+        }
+    });
+});
+</script>
+
+</body>
+</html>
