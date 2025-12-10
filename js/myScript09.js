@@ -82,7 +82,7 @@ function myPlot1() {
                 margin: { t: 50, l: 60, r: 20, b: 80 }
             };
 
-            Plotly.newPlot("myDiv8", traces, layout);
+            Plotly.newPlot("myDiv1", traces, layout);
         }
     );
 }
