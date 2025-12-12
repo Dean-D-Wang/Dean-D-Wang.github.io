@@ -71,17 +71,23 @@
     <!-- Import Oswald and Lato fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <section id="about-me-section" style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+    style="max-width: 1200px; margin: 0 auto; padding: 20px; 
+           height: 100vh; overflow: hidden;">   <!-- Important to keep the left column in a fixed position while right column swipe up and down-->
 
-        <div style="display: flex; gap: 30px; align-items: flex-start;">
+        <div style="display: flex; gap: 30px; align-items: flex-start;height: 100%;">
 
-            <!-- LEFT COLUMN: Photo + Contact -->
-            <div style="flex: 0 0 250px; text-align: left;">
+            <!-- LEFT COLUMN: Photo + Contact; (sticky)-->
+            <div style="
+                flex: 0 0 250px; 
+                text-align: left;
+                position:sticky;
+                top:20px;
+                align-self:flex-start">
 
-                <!-- Profile Image Placeholder -->
-                <img src="assets/Ding_Professional Headshot_005.jpg" 
+                <!-- Profile Image -->
+                <img src="assets/Ding_Professional_Headshot_005.jpg" 
                     alt="Ding's Photo" 
-                    style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; margin-bottom: 20px;">
+                    style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; margin-bottom: 20px;margin-top: 20px;">
 
                 <!-- Contact Placeholder -->
                 <div style="font-family: 'Lato', sans-serif; font-size: 16px; line-height: 1.6;">
@@ -99,8 +105,12 @@
 
             </div>
 
-            <!-- RIGHT COLUMN: About Me Text -->
-            <div style="flex: 1.5;">
+            <!-- RIGHT COLUMN: About Me Text (Scrollable) -->
+            <div style="
+                flex: 1.5;
+                overflow-y: auto;
+                height: 100%;
+                padding-right: 10px;">
 
                 <!-- Heading in Oswald -->
                 <h2 style="
