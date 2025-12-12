@@ -71,56 +71,55 @@
     <!-- Import Oswald and Lato fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <section id="about-me-section" style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+    <section id="about-me-section" 
+    style="max-width: 1200px; margin: 0 auto; padding: 20px; 
+           height: 100vh; overflow: hidden;">   <!-- Important -->
 
-        <div style="display: flex; gap: 30px; align-items: flex-start;">
+    <div style="display: flex; gap: 30px; align-items: flex-start; height: 100%;">
 
-            <!-- LEFT COLUMN: Photo + Contact -->
-            <div style="flex: 0 0 220px; text-align: left;">
+        <!-- LEFT COLUMN (sticky) -->
+        <div style="
+            flex: 0 0 220px; 
+            text-align: left;
+            position: sticky;
+            top: 20px;
+            align-self: flex-start;">
 
-                <!-- Profile Image Placeholder -->
-                <img src="https://dean-d-wang.github.io/assets/Ding_Professional%20Headshot_005.jpg"
-                    alt="Ding's Photo" 
-                    style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; margin-bottom: 20px;">
+            <!-- Profile Image -->
+            <img src="https://dean-d-wang.github.io/assets/Ding_Professional%20Headshot_005.jpg"
+                alt="Ding's Photo" 
+                style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; margin-bottom: 20px;">
 
-                <!-- Contact Placeholder -->
-                <div style="font-family: 'Lato', sans-serif; font-size: 14px; line-height: 1.6;">
-                    <strong>Contact</strong><br>
-                    <!-- Replace with your real info -->
-                    Ding "Dean" Wang, PhD
-                    Associate Project Scientist
-                    UCLA David Geffen School of Medicine
-                    Email: dingwang@g.ucla.edu<br>
-                    Office: UCLA Westwood Campus, CHS 14-138<br>
-                    Phone: (310)279-8038
-                    ORCiD: <a href="https://orcid.org/0000-0001-8236-8551" target="_blank" style="color: #0066cc; text-decoration: none;">
-        https://orcid.org/0000-0001-8236-8551</a>
-                </div>
-
+            <!-- Contact Info -->
+            <div style="font-family: 'Lato', sans-serif; font-size: 14px; line-height: 1.6;">
+                <strong>Contact</strong><br>
+                Ding "Dean" Wang, PhD<br>
+                Associate Project Scientist<br>
+                UCLA David Geffen School of Medicine<br>
+                Email: dingwang@g.ucla.edu<br>
+                Office: UCLA Westwood Campus, CHS 14-138<br>
+                Phone: (310)279-8038<br>
+                ORCiD: <a href="https://orcid.org/0000-0001-8236-8551" target="_blank" style="color: #0066cc; text-decoration: none;">
+                    https://orcid.org/0000-0001-8236-8551
+                </a>
             </div>
+        </div>
 
-            <!-- RIGHT COLUMN: Publication Text -->
-            <div style="flex: 2;">
+        <!-- RIGHT COLUMN (scrollable) -->
+        <div style="
+            flex: 2;
+            overflow-y: auto;
+            height: 100%; 
+            padding-right: 10px;">
 
-                <!-- Heading in Oswald -->
-                <h2 style="
-                    text-align: left;
-                    font-size: 32px;
-                    margin-bottom: 20px;
-                    font-family: 'Oswald', sans-serif;
-                ">
-                    Publications
-                </h2>
-
-                <!-- Body text in Lato -->
-                <h3 style = "
-                    text-align: left;
-                    font-size: 24px;
-                    margin-bottom: 20px;
-                    font-family: 'Oswald', sans-serif;
-                ">
-                    <u>Research Articles:</u>
-                </h3>
+            <!-- heading and long content -->
+            <h2 style="text-align: left; font-size: 32px; margin-bottom: 20px; font-family: 'Oswald', sans-serif;">
+                Publications
+            </h2>
+            <!-- your long list stays untouched -->
+            <h3 style="text-align: left; font-size: 24px; margin-bottom: 20px; font-family: 'Oswald', sans-serif;">
+                <u>Research Articles:</u>
+            </h3>
                 <ul style="text-align: left; line-height: 1.7; margin-bottom: 24px; font-size: 14px; font-family: 'Lato', sans-serif;">
                     <li>
                         Panday N, Sigdel D, Adam I, Ramirez J, Verma A, Eranki AN, Wang W, <strong style="color:rgb(29, 41, 214)">Wang D*</strong>, & Ping P. Data-Driven Insights into the Association Between Oxidative Stress and Calcium-Regulating Proteins in Cardiovascular Disease. <i>Antioxidants (Basel)</i>. 2024; 13(11). PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/39594561/">39594561</a>. (* Corresponding author)
