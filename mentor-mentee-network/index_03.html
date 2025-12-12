@@ -74,30 +74,60 @@
         Bridge2AI Scholars Network
     </h2>
     <!-- Body text in Lato -->
-    <p style="text-align: left; line-height: 1.7; margin-bottom: 16px; font-size: 18px; font-family: 'Lato', sans-serif;"> 
-        The NIH Common Fund’s Bridge to Artificial Intelligence (Bridge2AI) program will propel biomedical research forward by setting 
-        the stage for widespread adoption of artificial intelligence (AI) that tackles complex biomedical challenges beyond human intuition. 
-        A key step in this process is generating new “flagship” data sets and best practices for machine learning analysis. 
-        Machine learning is a type of Artificial Intelligence (AI) that provides machines (like computers) the ability 
-        to automatically learn and improve from experience, without being explicitly programmed. The biomedical research community generates 
-        a wealth of data, but most of these data are not suitable for machine learning because they are incomplete. By bringing technological 
-        and biomedical experts together with social scientists and humanists, the Bridge2AI program will help bring solutions to this deficit.
-    </p>
-    <p style="text-align: left; line-height: 1.7; margin-bottom: 16px; font-size: 18px; font-family: 'Lato', sans-serif;">
-        The Bridge2AI Bridge Center Training Team at UCLA, within the context of the recommendations outlined by the ACD AI WG, 
-        is committed to advancing the intersection of biomedical sciences and artificial intelligence (AI)/machine learning (ML). 
-        We aim to cultivate a new generation of experts through multi-level curricula that integrate healthcare ethics and offer 
-        hands-on interdisciplinary challenges. Our mission focuses on fostering collaboration across disciplines, 
-        enhancing data use ethics, and equipping learners with the skills to navigate and apply AI/ML in real-world biomedical contexts,
-        thereby shaping the future of healthcare innovation and policy.
-    </p>
-    <p style="text-align: left; line-height: 1.7; margin-bottom: 16px; font-size: 18px; font-family: 'Lato', sans-serif;">
-        I am honored to serve as a project manager and a webmaster for the Bridg2AI TRM-WG (<a href="https://bridge2ai-training.org">bridge2ai-training.org</a>).
-        One of the major effort of Bridge2AI TRM-WG team at UCLA is to create a mentor-mentee-network across the entired Bridge2AI community.
-        By applying a Plotly Javascript-based Map plotting, I generate this interactive Distribution Map (see below) to visualize the 
-        current status of mentor-mentee-network. An external csv file was used to host the raw data for rendering this map, which allows 
-        prompt updates without any requirement for coding skills.
-    </p>
+
+
+    <!-- CONTAINER -->
+    <div id="about-text">
+
+        <!-- VISIBLE FIRST PARAGRAPH -->
+        <p style="text-align: left; line-height: 1.7; margin-bottom: 16px; font-size: 18px; font-family: 'Lato', sans-serif;"> 
+            The NIH Common Fund’s Bridge to Artificial Intelligence (Bridge2AI) program will propel biomedical research forward by setting 
+            the stage for widespread adoption of artificial intelligence (AI) that tackles complex biomedical challenges beyond human intuition. 
+            A key step in this process is generating new “flagship” data sets and best practices for machine learning analysis. 
+            Machine learning is a type of Artificial Intelligence (AI) that provides machines (like computers) the ability 
+            to automatically learn and improve from experience, without being explicitly programmed. The biomedical research community generates 
+            a wealth of data, but most of these data are not suitable for machine learning because they are incomplete. By bringing technological 
+            and biomedical experts together with social scientists and humanists, the Bridge2AI program will help bring solutions to this deficit.
+        </p>
+
+        <!-- HIDDEN CONTENT -->
+        <div id="more-text" style="display: none;">
+            <p style="text-align: left; line-height: 1.7; margin-bottom: 16px; font-size: 18px; font-family: 'Lato', sans-serif;">
+                The Bridge2AI Bridge Center Training, Recruitment, and Mentoring Working Group (TRM-WG) Team at UCLA, within the context of the recommendations outlined by the ACD AI WG, 
+                is committed to advancing the intersection of biomedical sciences and artificial intelligence (AI)/machine learning (ML). 
+                We aim to cultivate a new generation of experts through multi-level curricula that integrate healthcare ethics and offer 
+                hands-on interdisciplinary challenges. Our mission focuses on fostering collaboration across disciplines, 
+                enhancing data use ethics, and equipping learners with the skills to navigate and apply AI/ML in real-world biomedical contexts,
+                thereby shaping the future of healthcare innovation and policy.
+            </p>
+            <p style="text-align: left; line-height: 1.7; margin-bottom: 16px; font-size: 18px; font-family: 'Lato', sans-serif;">
+                I am honored to serve as a project manager and a webmaster for the Bridg2AI TRM-WG website (<a href="https://bridge2ai-training.org">bridge2ai-training.org</a>).
+                One of the major effort of Bridge2AI TRM-WG team at UCLA is to create a mentor-mentee-network across the entired Bridge2AI community.
+                By applying a Plotly Javascript-based Map plotting, I generate this interactive Distribution Map (see below) to visualize the 
+                current status of mentor-mentee-network. An external csv file was used to host the raw data for rendering this map, which allows 
+                prompt updates without any requirement for coding skills.
+            </p>
+        </div>
+
+        <!-- READ MORE BUTTON -->
+        <button id="read-more-btn"
+            style="
+                background: #f0f0f0;
+                border: 1px solid #aaa;
+                padding: 8px 14px;
+                font-size: 14px;
+                border-radius: 6px;
+                cursor: pointer;
+                font-family: 'Lato', sans-serif;
+                transition: background 0.2s;
+            "
+            onmouseover="this.style.background='#e0e0e0'"
+            onmouseout="this.style.background='#f0f0f0'"
+            onclick="document.getElementById('more-text').style.display='block'; this.style.display='none';">
+            Read More
+        </button>
+    </div>  
+
 
     <h3 style="text-align: left; font-size: 24px; margin-bottom: 20px; font-family: 'Oswald', sans-serif;"> <u>Replot the Bridge2AI Scholar Distribution using OpenStreetMap tiles </u></h3>
 
