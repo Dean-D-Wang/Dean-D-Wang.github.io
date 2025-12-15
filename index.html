@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- Updated External CSS -->
-    <link rel="stylesheet" type="text/css" href="https://Dean-D-Wang.github.io/assets/styles_updated.css">
+    <link rel="stylesheet" type="text/css" href="https://Dean-D-Wang.github.io/assets/styles_12_15_2025.css">
 
     <!-- Plotly + D3 -->
     <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
@@ -19,9 +19,14 @@
 
 <div class="toolbar" role="banner">
 
-    <img width="40" alt="Training Logo"
-         src="https://dean-d-wang.github.io/assets/Bridge2AI-TRM-WG.png">
+    <!-- Logo -->
+    <img
+        width="40"
+        alt="Training Logo"
+        src="https://dean-d-wang.github.io/assets/Bridge2AI-TRM-WG.png"
+    >
 
+    <!-- Title -->
     <span>Welcome to Dean's Research Homepage</span>
 
     <div class="spacer"></div>
@@ -39,10 +44,12 @@
         <svg id="youtube-logo" height="24" width="24">...</svg>
     </a>
 
-
     <!-- PROJECTS DROPDOWN -->
-    <div class="dropdown" style="margin-left:20px;">
-        <button class="dropdown-button">Projects</button>
+    <div class="dropdown">
+        <button class="toolbar-button" id="dropdownBtn">
+            Projects
+        </button>
+
         <div class="dropdown-content">
             <a href="/protein-turnovers/index_01.html">Protein Turnovers</a>
             <a href="/ptm-predictions/index_02.html">PTM Predictions</a>
@@ -50,9 +57,12 @@
         </div>
     </div>
 
-    <!-- Portfolio DROPDOWN -->
-    <div class="dropdown" style="margin-left:20px;">
-        <button class="dropdown-button">Portfolio</button>
+    <!-- PORTFOLIO DROPDOWN -->
+    <div class="dropdown">
+        <button class="toolbar-button">
+            Portfolio
+        </button>
+
         <div class="dropdown-content">
             <a href="/scientific-visualization/index_05.html">Scientific Visualization</a>
             <a href="/promotion-materials/index_06.html">Promotion Materials</a>
@@ -60,20 +70,18 @@
         </div>
     </div>
 
-    <!-- Publications BUTTON -->
-    <button onclick="location.href='/publications/index_04.html'"
-            class="toolbar-button"
-            style="margin-left:20px;">
+    <!-- Publications -->
+    <a href="/publications/index_04.html" class="toolbar-button">
         Publications
-    </button>
-    <!-- HOME BUTTON -->
-    <button onclick="location.href='/index.html'"
-            class="toolbar-button"
-            style="margin-left:20px;">
+    </a>
+
+    <!-- Home -->
+    <a href="/index.html" class="toolbar-button" id="homeBtn">
         Home
-    </button>
+    </a>
 
 </div>
+
 
 
 <!-- ************** MAIN CONTENT ************** -->
