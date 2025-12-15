@@ -46,29 +46,23 @@
 
     <!-- PROJECTS DROPDOWN -->
     <div class="dropdown">
-        <button class="toolbar-button" id="dropdownBtn">
-            Projects
-        </button>
-
+        <button class="toolbar-button">Projects</button>
         <div class="dropdown-content">
             <a href="/protein-turnovers/index_01.html">Protein Turnovers</a>
             <a href="/ptm-predictions/index_02.html">PTM Predictions</a>
             <a href="/mentor-mentee-network/index_03.html">Bridge2AI Network</a>
         </div>
     </div>
-
     <!-- PORTFOLIO DROPDOWN -->
     <div class="dropdown">
-        <button class="toolbar-button">
-            Portfolio
-        </button>
-
+        <button class="toolbar-button">Portfolio</button>
         <div class="dropdown-content">
             <a href="/scientific-visualization/index_05.html">Scientific Visualization</a>
             <a href="/promotion-materials/index_06.html">Promotion Materials</a>
             <a href="/webdesign/index_07.html">Website Design</a>
         </div>
     </div>
+
 
     <!-- Publications -->
     <a href="/publications/index_04.html" class="toolbar-button">
@@ -274,22 +268,19 @@
 
 
 
-<!-- ************** DROPDOWN SCRIPT ************** 
+<!-- ************** DROPDOWN SCRIPT ************** -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-
     document.querySelectorAll(".dropdown").forEach(dropdown => {
-        const button = dropdown.querySelector(".dropdown-button");
+        const button = dropdown.querySelector(".toolbar-button");
         const menu = dropdown.querySelector(".dropdown-content");
 
         button.addEventListener("click", (e) => {
             e.stopPropagation();
-
             // Close other dropdowns
             document.querySelectorAll(".dropdown-content").forEach(d => {
                 if (d !== menu) d.style.display = "none";
             });
-
             menu.style.display = (menu.style.display === "block") ? "none" : "block";
         });
     });
@@ -301,7 +292,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-</script> -->
+</script>
+
 
 </body>
 </html>
