@@ -39,11 +39,11 @@
         <svg id="youtube-logo" height="24" width="24">...</svg>
     </a>
 
+
     <!-- PROJECTS DROPDOWN -->
     <div class="dropdown" style="margin-left:20px;">
-        <button id="dropdownBtn" class="dropdown-button">Projects</button>
-
-        <div class="dropdown-content" id="dropdownMenu">
+        <button class="dropdown-button">Projects</button>
+        <div class="dropdown-content">
             <a href="/protein-turnovers/index_01.html">Protein Turnovers</a>
             <a href="/ptm-predictions/index_02.html">PTM Predictions</a>
             <a href="/mentor-mentee-network/index_03.html">Bridge2AI Network</a>
@@ -52,14 +52,14 @@
 
     <!-- Portfolio DROPDOWN -->
     <div class="dropdown" style="margin-left:20px;">
-        <button id="dropdownBtn" class="dropdown-button">Portfolio</button>
-
-        <div class="dropdown-content" id="dropdownMenu">
+        <button class="dropdown-button">Portfolio</button>
+        <div class="dropdown-content">
             <a href="/scientific-visualization/index_05.html">Scientific Visualization</a>
             <a href="/promotion-materials/index_06.html">Promotion Materials</a>
             <a href="/webdesign/index_07.html">Website Design</a>
         </div>
     </div>
+
     <!-- Publications BUTTON -->
     <button onclick="location.href='/publications/index_04.html'"
             class="toolbar-button"
@@ -269,17 +269,28 @@
 <!-- ************** DROPDOWN SCRIPT ************** -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.getElementById("dropdownBtn");
-    const menu = document.getElementById("dropdownMenu");
 
-    btn.addEventListener("click", () => {
-        menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    document.querySelectorAll(".dropdown").forEach(dropdown => {
+        const button = dropdown.querySelector(".dropdown-button");
+        const menu = dropdown.querySelector(".dropdown-content");
+
+        button.addEventListener("click", (e) => {
+            e.stopPropagation();
+
+            // Close other dropdowns
+            document.querySelectorAll(".dropdown-content").forEach(d => {
+                if (d !== menu) d.style.display = "none";
+            });
+
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        });
     });
 
-    document.addEventListener("click", (event) => {
-        if (!event.target.closest(".dropdown")) {
-            menu.style.display = "none";
-        }
+    // Close all when clicking outside
+    document.addEventListener("click", () => {
+        document.querySelectorAll(".dropdown-content").forEach(d => {
+            d.style.display = "none";
+        });
     });
 });
 </script>
