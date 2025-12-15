@@ -1,5 +1,5 @@
 /* ========================================================= */
-/* ===================== Global Base Styles ================= */
+/* =============== Global Base Styles ======================= */
 /* ========================================================= */
 
 :host, body {
@@ -8,10 +8,10 @@
     font-size: 14px;
     color: #333;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
 }
 
 *, *::before, *::after {
@@ -24,7 +24,7 @@ p { margin: 0; }
 .spacer { flex: 1; }
 
 /* ========================================================= */
-/* ================== Toolbar / Navbar ==================== */
+/* =================== Toolbar / Navbar ===================== */
 /* ========================================================= */
 
 .toolbar {
@@ -33,24 +33,31 @@ p { margin: 0; }
     left: 0;
     right: 0;
     height: 60px;
+
     display: flex;
     align-items: center;
     padding: 0 16px;
+
     background-color: #1976d2;
     color: white;
+
     font-weight: 600;
     font-size: 18px;
+    font-family: 'Inter', sans-serif;
+
     z-index: 1000;
 }
 
-.toolbar img { margin-right: 16px; }
+.toolbar img { 
+    margin-right: 16px; 
+}
 
 .toolbar span {
     font-size: 20px;
     font-weight: 600;
 }
 
-/* Social Icons */
+/* Social icons */
 .toolbar svg {
     margin: 0 6px;
     cursor: pointer;
@@ -60,182 +67,43 @@ p { margin: 0; }
 .toolbar svg:hover { opacity: 0.85; }
 
 /* ========================================================= */
-/* ================= Buttons & Dropdown =================== */
+/* ============ Toolbar Buttons + Dropdown ================= */
 /* ========================================================= */
 
-.toolbar-button {
+.toolbar-button,
+#dropdownBtn,
+#homeBtn {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 600;
+
     padding: 8px 14px;
     margin-left: 14px;
-    color: white;
+
+    color: white !important;
     background: transparent;
     border: none;
     border-radius: 8px;
+
     cursor: pointer;
     transition: background 0.25s ease, transform 0.1s ease;
+
+    text-decoration: none; /* REMOVE underline for <a> links */
 }
 
-.toolbar-button:hover {
-    background: rgba(255,255,255,0.2);
+.toolbar-button:hover,
+#dropdownBtn:hover,
+#homeBtn:hover {
+    background: rgba(255,255,255,0.20);
     transform: translateY(-1px);
 }
 
-/* Dropdown arrow on all toolbar dropdown buttons */
-.dropdown > .toolbar-button::after {
+/* Dropdown Arrow */
+#dropdownBtn::after {
     content: " ▼";
     font-size: 12px;
     padding-left: 4px;
 }
 
-/* Dropdown container */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 52px;
-    right: 0;
-    background: rgba(15, 15, 15, 0.95);
-    min-width: 180px;
-    border-radius: 8px;
-    padding: 6px 0;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
-    z-index: 999;
-    animation: fadeIn 0.15s ease-out;
-    overflow: hidden;
-}
-
-/* Dropdown links */
-.dropdown-content a {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    text-decoration: none;
-    padding: 12px 16px;
-    display: block;
-    transition: background 0.2s ease;
-}
-
-.dropdown-content a:hover {
-    background: rgba(255,255,255,0.1);
-}
-
-/* Smooth appear animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-4px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
-
 /* ========================================================= */
-/* ====================== Main Content ==================== */
-/* ========================================================= */
-
-.content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 1440px;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* ========================================================= */
-/* ==================== Cards / Buttons =================== */
-/* ========================================================= */
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 16px;
-}
-
-.card {
-    border-radius: 8px;
-    border: 2px solid #89f7f7;
-    background-color: #cdfefa;
-    height: 40px;
-    width: 200px;
-    margin: 0 8px 16px;
-    padding: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s ease;
-    line-height: 24px;
-    cursor: pointer;
-}
-
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0,0,0,0.35);
-}
-
-/* Highlight Card */
-.highlight-card {
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-    border: none;
-    min-width: 30%;
-}
-
-/* ========================================================= */
-/* =================== Terminal Block ===================== */
-/* ========================================================= */
-
-.terminal {
-    width: 80%;
-    max-width: 600px;
-    border-radius: 6px;
-    margin-top: 8px;
-    padding-top: 45px;
-    background-color: rgb(15,15,16);
-    overflow: hidden;
-    position: relative;
-}
-
-.terminal::before {
-    content: "• • •";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 14px 0 14px 14px;
-    background: rgb(58,58,58);
-    color: #c2c3c4;
-    font-size: 2rem;
-    line-height: 0;
-}
-
-.terminal pre {
-    font-family: SFMono-Regular, Consolas, Menlo, monospace;
-    color: white;
-    padding: 0 1rem 1rem;
-}
-
-/* ========================================================= */
-/* ==================== Responsive ========================== */
-/* ========================================================= */
-
-@media (max-width: 767px) {
-    .card-container > *:not(.circle-link),
-    .terminal {
-        width: 100%;
-    }
-}
-
-@media (max-width: 575px) {
-    svg#rocket-smoke {
-        display: none;
-        visibility: hidden;
-    }
-}
-
+/* =================== Dropdown*
