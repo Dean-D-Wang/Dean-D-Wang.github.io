@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dean's Web Assets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Updated External CSS -->
+    <link rel="stylesheet" type="text/css" href="https://Dean-D-Wang.github.io/assets/styles_updated.css">
+
+    <!-- Plotly + D3 -->
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+</head>
+
+<body>
+
+<!-- ************** TOOL BAR ************** -->
+
+<div class="toolbar" role="banner">
+
+    <img width="40" alt="Training Logo"
+         src="https://dean-d-wang.github.io/assets/Bridge2AI-TRM-WG.png">
+
+    <span>Welcome to Dean's Research Homepage</span>
+
+    <div class="spacer"></div>
+
+    <!-- Social Icons -->
+    <a href="https://twitter.com/angular" target="_blank" rel="noopener">
+        <svg id="twitter-logo" height="24">...</svg>
+    </a>
+
+    <a href="https://github.com/angular" target="_blank" rel="noopener">
+        <svg id="github-logo" height="30" width="30">...</svg>
+    </a>
+
+    <a href="https://youtube.com/angular" target="_blank" rel="noopener">
+        <svg id="youtube-logo" height="24" width="24">...</svg>
+    </a>
+
+    <!-- PROJECTS DROPDOWN -->
+    <div class="dropdown" style="margin-left:20px;">
+        <button id="dropdownBtn" class="dropdown-button">Projects</button>
+
+        <div class="dropdown-content" id="dropdownMenu">
+            <a href="/protein-turnovers/index_01.html">Protein Turnovers</a>
+            <a href="/ptm-predictions/index_02.html">PTM Predictions</a>
+            <a href="/mentor-mentee-network/index_03.html">Bridge2AI Network</a>
+        </div>
+    </div>
+
+    <!-- PROJECTS DROPDOWN -->
+    <div class="dropdown" style="margin-left:20px;">
+        <button id="dropdownBtn" class="dropdown-button">Portfolio</button>
+
+        <div class="dropdown-content" id="dropdownMenu">
+            <a href="/scientific-visualization/index_05.html">Scientific Visualization</a>
+            <a href="/promotion-materials/index_06.html">Promotion Materials</a>
+            <a href="/webdesign/index_07.html">Website Design</a>
+        </div>
+    </div>
+    <!-- Publications BUTTON -->
+    <button onclick="location.href='/publications/index_04.html'"
+            class="toolbar-button"
+            style="margin-left:20px;">
+        Publications
+    </button>
+    <!-- HOME BUTTON -->
+    <button onclick="location.href='/index.html'"
+            class="toolbar-button"
+            style="margin-left:20px;">
+        Home
+    </button>
+
+</div>
+
+<!-- ************** MAIN CONTENT ************** -->
+
+<div class="content" role="main">
+    <!-- Import Oswald and Lato fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</div>
+
+<!-- ************** DROPDOWN SCRIPT ************** -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("dropdownBtn");
+    const menu = document.getElementById("dropdownMenu");
+
+    btn.addEventListener("click", () => {
+        menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!event.target.closest(".dropdown")) {
+            menu.style.display = "none";
+        }
+    });
+});
+</script>
+
+</body>
+</html>
+
