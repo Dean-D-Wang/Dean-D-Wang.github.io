@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dean's Publications</title>
+    <title>Dean's Web Assets</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,77 +16,71 @@
 
 <body>
 
-<!-- HERO + TOOLBAR -->
-<div style="position: relative; width: 100%; height: 350px; margin-bottom: 30px;">
+<!-- ************** TOOL BAR ************** -->
 
-    <!-- Hero Image (full-width) -->
-    <img src="/assets/hero_001.png" alt="Hero Image"
-         style="width:100%; height:100%; object-fit: cover; display:block;">
+<div class="toolbar" role="banner">
 
-    <!-- Toolbar (floating, full-width, semi-transparent white) -->
-    <div class="toolbar" style="
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.25); /* semi-transparent white */
-        color: #333;
-        border-radius: 0; /* remove rounded corners */
-        padding: 4px 16px; /* reduced vertical padding to shrink height */
-        display: flex;
-        align-items: center;
-        z-index: 10;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-    ">
-        <img width="40" alt="Training Logo"
-             src="https://dean-d-wang.github.io/assets/Bridge2AI-TRM-WG.png">
-        <span style="color:#333;">Welcome to Dean's Research Homepage</span>
-        <div class="spacer"></div>
+    <!-- Logo -->
+    <img
+        width="40"
+        alt="Training Logo"
+        src="https://dean-d-wang.github.io/assets/Bridge2AI-TRM-WG.png"
+    >
 
-        <!-- Social Icons -->
-        <a href="https://twitter.com/angular" target="_blank" rel="noopener"><svg id="twitter-logo" height="24">...</svg></a>
-        <a href="https://github.com/angular" target="_blank" rel="noopener"><svg id="github-logo" height="30" width="30">...</svg></a>
-        <a href="https://youtube.com/angular" target="_blank" rel="noopener"><svg id="youtube-logo" height="24" width="24">...</svg></a>
+    <!-- Title -->
+    <span>Welcome to Dean's Research Homepage</span>
 
-        <!-- Dropdowns -->
-        <div class="dropdown">
-            <button class="toolbar-button">Projects ▼</button>
-            <div class="dropdown-content">
-                <a href="/protein-turnovers/index_01.html">Protein Turnovers</a>
-                <a href="/ptm-predictions/index_02.html">PTM Predictions</a>
-                <a href="/mentor-mentee-network/index_03.html">Bridge2AI Network</a>
-            </div>
+    <div class="spacer"></div>
+
+    <!-- Social Icons -->
+    <a href="https://twitter.com/angular" target="_blank" rel="noopener">
+        <svg id="twitter-logo" height="24">...</svg>
+    </a>
+
+    <a href="https://github.com/angular" target="_blank" rel="noopener">
+        <svg id="github-logo" height="30" width="30">...</svg>
+    </a>
+
+    <a href="https://youtube.com/angular" target="_blank" rel="noopener">
+        <svg id="youtube-logo" height="24" width="24">...</svg>
+    </a>
+
+    <!-- PROJECTS DROPDOWN -->
+    <div class="dropdown">
+        <button class="toolbar-button">Projects ▼</button>
+        <div class="dropdown-content">
+            <a href="/protein-turnovers/index_01.html">Protein Turnovers</a>
+            <a href="/ptm-predictions/index_02.html">PTM Predictions</a>
+            <a href="/mentor-mentee-network/index_03.html">Bridge2AI Network</a>
         </div>
-
-        <div class="dropdown">
-            <button class="toolbar-button">Portfolio ▼</button>
-            <div class="dropdown-content">
-                <a href="/scientific-visualization/index_05.html">Scientific Visualization</a>
-                <a href="/promotion-materials/index_06.html">Promotion Materials</a>
-                <a href="/webdesign/index_07.html">Website Design</a>
-            </div>
+    </div>
+    <!-- PORTFOLIO DROPDOWN -->
+    <div class="dropdown">
+        <button class="toolbar-button">Portfolio ▼</button>
+        <div class="dropdown-content">
+            <a href="/scientific-visualization/index_05.html">Scientific Visualization</a>
+            <a href="/promotion-materials/index_06.html">Promotion Materials</a>
+            <a href="/webdesign/index_07.html">Website Design</a>
         </div>
-
-        <!-- Publications and Home -->
-        <button onclick="location.href='/publications/index_04.html'" class="toolbar-button">Publications</button>
-        <button onclick="location.href='/index.html'" class="toolbar-button" style="margin-right: 16px;">Home</button>
-
     </div>
 
-    <!-- Hero Title (moved closer to vertical center) -->
-    <h1 style="
-        position: absolute;
-        top: 50%;  /* vertical center */
-        left: 50%;
-        transform: translate(-50%, -50%); /* center exactly */
-        color: white;
-        font-family: 'Oswald', sans-serif;
-        font-size: 96px;
-        text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-        margin: 0;
-        ">Data Science- & AI-Enabled Biomolecular Phenotyping & Mechanism Discovery
-    </h1>
+
+    <!-- Publications BUTTON -->
+    <button onclick="location.href='/publications/index_04.html'"
+            class="toolbar-button"
+            style="margin-left:20px;">
+        Publications
+    </button>
+
+    <!-- HOME BUTTON -->
+    <button onclick="location.href='/index.html'"
+            class="toolbar-button"
+            style="margin-left:20px;">
+        Home
+    </button>
+
 </div>
+
 
 
 <!-- ************** MAIN CONTENT ************** -->
