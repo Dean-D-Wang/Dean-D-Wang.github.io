@@ -29,10 +29,10 @@
         top: 0;
         left: 0;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+        background-color: rgba(255, 255, 255, 0.25); /* semi-transparent white */
         color: #333;
         border-radius: 0; /* remove rounded corners */
-        padding: 8px 16px;
+        padding: 4px 16px; /* reduced vertical padding to shrink height */
         display: flex;
         align-items: center;
         z-index: 10;
@@ -74,13 +74,12 @@
 
     <!-- Hero Title -->
     <h1 style="
-        position: absolute;
-        bottom: 20px;
+        top: 50%;  /* vertical center */
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%); /* center exactly */
         color: white;
         font-family: 'Oswald', sans-serif;
-        font-size: 64px;
+        font-size: 48px;
         text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
         margin: 0;
     ">Publications</h1>
