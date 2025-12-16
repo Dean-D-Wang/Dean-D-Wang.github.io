@@ -16,77 +16,74 @@
 
 <body>
 
-<!-- ************** TOOL BAR ************** -->
-
-<div class="toolbar" role="banner">
-
-    <img width="40" alt="Training Logo"
-         src="https://dean-d-wang.github.io/assets/Bridge2AI-TRM-WG.png">
-
-    <span>Welcome to Dean's Research Homepage</span>
-
-    <div class="spacer"></div>
-
-    <!-- Social Icons -->
-    <a href="https://twitter.com/angular" target="_blank" rel="noopener">
-        <svg id="twitter-logo" height="24">...</svg>
-    </a>
-
-    <a href="https://github.com/angular" target="_blank" rel="noopener">
-        <svg id="github-logo" height="30" width="30">...</svg>
-    </a>
-
-    <a href="https://youtube.com/angular" target="_blank" rel="noopener">
-        <svg id="youtube-logo" height="24" width="24">...</svg>
-    </a>
-
-    <!-- PROJECTS DROPDOWN 
-    <div class="dropdown" style="margin-left:20px;">
-        <button id="dropdownBtn" class="dropdown-button">Projects</button>
-
-        <div class="dropdown-content" id="dropdownMenu">
-            <a href="/protein-turnovers/index_01.html">Protein Turnovers</a>
-            <a href="/ptm-predictions/index_02.html">PTM Predictions</a>
-            <a href="/mentor-mentee-network/index_03.html">Bridge2AI Network</a>
-        </div>
-    </div>  -->
+<!-- HERO + TOOLBAR -->
+<div style="position: relative; width: 100%; height: 350px; margin-bottom: 30px;">
     
-    
-    <!-- PROJECTS DROPDOWN -->
-    <div class="dropdown">
-        <button class="toolbar-button">Projects ▼</button>
-        <div class="dropdown-content">
-            <a href="/protein-turnovers/index_01.html">Protein Turnovers</a>
-            <a href="/ptm-predictions/index_02.html">PTM Predictions</a>
-            <a href="/mentor-mentee-network/index_03.html">Bridge2AI Network</a>
+    <!-- Hero Image -->
+    <img src="/assets/hero_001.png" alt="Hero Image"
+         style="width:100%; height:100%; object-fit: cover; border-radius:8px;">
+
+    <!-- Toolbar (floating on top) -->
+    <div class="toolbar" style="
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background-color: rgba(25, 118, 210, 0.75); /* semi-transparent blue */
+        border-radius: 8px;
+        padding: 8px 16px;
+        z-index: 10;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+    ">
+        <img width="40" alt="Training Logo"
+             src="https://dean-d-wang.github.io/assets/Bridge2AI-TRM-WG.png">
+        <span>Welcome to Dean's Research Homepage</span>
+        <div class="spacer"></div>
+
+        <!-- Social Icons -->
+        <a href="https://twitter.com/angular" target="_blank" rel="noopener"><svg id="twitter-logo" height="24">...</svg></a>
+        <a href="https://github.com/angular" target="_blank" rel="noopener"><svg id="github-logo" height="30" width="30">...</svg></a>
+        <a href="https://youtube.com/angular" target="_blank" rel="noopener"><svg id="youtube-logo" height="24" width="24">...</svg></a>
+
+        <!-- Dropdowns -->
+        <div class="dropdown">
+            <button class="toolbar-button">Projects ▼</button>
+            <div class="dropdown-content">
+                <a href="/protein-turnovers/index_01.html">Protein Turnovers</a>
+                <a href="/ptm-predictions/index_02.html">PTM Predictions</a>
+                <a href="/mentor-mentee-network/index_03.html">Bridge2AI Network</a>
+            </div>
         </div>
-    </div>
-    
-    <!-- PORTFOLIO DROPDOWN -->
-    <div class="dropdown">
-        <button class="toolbar-button">Portfolio ▼</button>
-        <div class="dropdown-content">
-            <a href="/scientific-visualization/index_05.html">Scientific Visualization</a>
-            <a href="/promotion-materials/index_06.html">Promotion Materials</a>
-            <a href="/webdesign/index_07.html">Website Design</a>
+
+        <div class="dropdown">
+            <button class="toolbar-button">Portfolio ▼</button>
+            <div class="dropdown-content">
+                <a href="/scientific-visualization/index_05.html">Scientific Visualization</a>
+                <a href="/promotion-materials/index_06.html">Promotion Materials</a>
+                <a href="/webdesign/index_07.html">Website Design</a>
+            </div>
         </div>
+
+        <!-- Publications and Home -->
+        <button onclick="location.href='/publications/index_04.html'" class="toolbar-button">Publications</button>
+        <button onclick="location.href='/index.html'" class="toolbar-button">Home</button>
     </div>
 
-    
-    <!-- Publications BUTTON -->
-    <button onclick="location.href='/publications/index_04.html'"
-            class="toolbar-button"
-            style="margin-left:20px;">
-        Publications
-    </button>
-    <!-- HOME BUTTON -->
-    <button onclick="location.href='/index.html'"
-            class="toolbar-button"
-            style="margin-left:20px;">
-        Home
-    </button>
-
+    <!-- Hero Title -->
+    <h1 style="
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-family: 'Oswald', sans-serif;
+        font-size: 48px;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        margin: 0;
+    ">Publications</h1>
 </div>
+
 
 
 <!-- ************** MAIN CONTENT ************** -->
@@ -94,22 +91,6 @@
 
 <div class="content" role="main">
     
-    <!-- HERO IMAGE -->
-    <div style="position: relative; width: 100%; height: 300px; margin-bottom: 30px;">
-        <img src="https://github.com/Dean-D-Wang/Dean-D-Wang.github.io/blob/main/assets/hero_001.png" alt="Hero Image" style="width:100%; height:100%; object-fit: cover; border-radius:8px;">
-        <h1 style="
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-family: 'Oswald', sans-serif;
-            font-size: 48px;
-            text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-            margin: 0;
-        ">Publications</h1>
-    </div>
-
 
     <section id="about-me-section" 
     style="max-width: 1200px; margin: 0 auto; padding: 20px; 
