@@ -267,17 +267,25 @@
 <!-- ************** DROPDOWN SCRIPT ************** -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.getElementById("dropdownBtn");
-    const menu = document.getElementById("dropdownMenu");
+    document.querySelectorAll(".dropdown").forEach(dropdown => {
+        const button = dropdown.querySelector(".toolbar-button");
+        const menu = dropdown.querySelector(".dropdown-content");
 
-    btn.addEventListener("click", () => {
-        menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        button.addEventListener("click", (e) => {
+            e.stopPropagation();
+            // Close other dropdowns
+            document.querySelectorAll(".dropdown-content").forEach(d => {
+                if (d !== menu) d.style.display = "none";
+            });
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        });
     });
 
-    document.addEventListener("click", (event) => {
-        if (!event.target.closest(".dropdown")) {
-            menu.style.display = "none";
-        }
+    // Close all when clicking outside
+    document.addEventListener("click", () => {
+        document.querySelectorAll(".dropdown-content").forEach(d => {
+            d.style.display = "none";
+        });
     });
 });
 </script>
