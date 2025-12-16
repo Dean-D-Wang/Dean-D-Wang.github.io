@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dean's Publications</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Updated External CSS -->
+    <link rel="stylesheet" type="text/css" href="https://Dean-D-Wang.github.io/assets/styles_updated.css">
+
+    <!-- Plotly + D3 -->
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+</head>
+
+<body>
+
+<!-- ************** TOOL BAR ************** -->
+
+<div class="toolbar" role="banner">
+
+    <img width="40" alt="Training Logo"
+         src="https://dean-d-wang.github.io/assets/Bridge2AI-TRM-WG.png">
+
+    <span>Welcome to Dean's Research Homepage</span>
+
+    <div class="spacer"></div>
+
+    <!-- Social Icons -->
+    <a href="https://twitter.com/angular" target="_blank" rel="noopener">
+        <svg id="twitter-logo" height="24">...</svg>
+    </a>
+
+    <a href="https://github.com/angular" target="_blank" rel="noopener">
+        <svg id="github-logo" height="30" width="30">...</svg>
+    </a>
+
+    <a href="https://youtube.com/angular" target="_blank" rel="noopener">
+        <svg id="youtube-logo" height="24" width="24">...</svg>
+    </a>
+
+    <!-- PROJECTS DROPDOWN 
+    <div class="dropdown" style="margin-left:20px;">
+        <button id="dropdownBtn" class="dropdown-button">Projects</button>
+
+        <div class="dropdown-content" id="dropdownMenu">
+            <a href="/protein-turnovers/index_01.html">Protein Turnovers</a>
+            <a href="/ptm-predictions/index_02.html">PTM Predictions</a>
+            <a href="/mentor-mentee-network/index_03.html">Bridge2AI Network</a>
+        </div>
+    </div>  -->
+    
+    
+    <!-- PROJECTS DROPDOWN -->
+    <div class="dropdown">
+        <button class="toolbar-button">Projects ▼</button>
+        <div class="dropdown-content">
+            <a href="/protein-turnovers/index_01.html">Protein Turnovers</a>
+            <a href="/ptm-predictions/index_02.html">PTM Predictions</a>
+            <a href="/mentor-mentee-network/index_03.html">Bridge2AI Network</a>
+        </div>
+    </div>
+    
+    <!-- PORTFOLIO DROPDOWN -->
+    <div class="dropdown">
+        <button class="toolbar-button">Portfolio ▼</button>
+        <div class="dropdown-content">
+            <a href="/scientific-visualization/index_05.html">Scientific Visualization</a>
+            <a href="/promotion-materials/index_06.html">Promotion Materials</a>
+            <a href="/webdesign/index_07.html">Website Design</a>
+        </div>
+    </div>
+
+    
+    <!-- Publications BUTTON -->
+    <button onclick="location.href='/publications/index_04.html'"
+            class="toolbar-button"
+            style="margin-left:20px;">
+        Publications
+    </button>
+    <!-- HOME BUTTON -->
+    <button onclick="location.href='/index.html'"
+            class="toolbar-button"
+            style="margin-left:20px;">
+        Home
+    </button>
+
+</div>
+
+
+<!-- ************** MAIN CONTENT ************** -->
+
+<div class="content" role="main">
+    <!-- Import Oswald and Lato fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <section id="about-me-section" 
+    style="max-width: 1200px; margin: 0 auto; padding: 20px; 
+           height: 100vh; overflow: hidden;">   <!-- Important -->
+
+    <div style="display: flex; gap: 30px; align-items: flex-start; height: 100%;">
+
+        <!-- LEFT COLUMN (sticky) -->
+        <div style="
+            flex: 0 0 220px; 
+            text-align: left;
+            position: sticky;
+            top: 20px;
+            align-self: flex-start;">
+
+            <!-- Profile Image -->
+            <img src="https://dean-d-wang.github.io/assets/Ding_Professional_Headshot_005.jpg"
+                alt="Ding's Photo" 
+                style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; margin-bottom: 20px;">
+
+            <!-- Contact Info -->
+            <div style="font-family: 'Lato', sans-serif; font-size: 14px; line-height: 1.6;">
+                <strong>Contact</strong><br>
+                Ding "Dean" Wang, PhD<br>
+                Associate Project Scientist<br>
+                UCLA David Geffen School of Medicine<br>
+                Email: dingwang@g.ucla.edu<br>
+                Office: UCLA Westwood Campus, CHS 14-138<br>
+                Phone: (310)279-8038<br>
+                ORCiD: <a href="https://orcid.org/0000-0001-8236-8551" target="_blank" style="color: #0066cc; text-decoration: none;">
+                    https://orcid.org/0000-0001-8236-8551
+                </a>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN (scrollable) -->
+        <div style="
+            flex: 2;
+            overflow-y: auto;
+            height: 100%; 
+            padding-right: 10px;">
+
+            <!-- heading and long content -->
+            <h2 style="text-align: left; font-size: 32px; margin-bottom: 20px; font-family: 'Oswald', sans-serif;">
+                Publications
+            </h2>
+            <!-- your long list stays untouched -->
+            <h3 style="text-align: left; font-size: 24px; margin-bottom: 20px; font-family: 'Oswald', sans-serif;">
+                <u>Research Articles:</u>
+            </h3>
+                <ul style="text-align: left; line-height: 1.7; margin-bottom: 24px; font-size: 14px; font-family: 'Lato', sans-serif;">
+                    <li>
+                        Panday N, Sigdel D, Adam I, Ramirez J, Verma A, Eranki AN, Wang W, <strong style="color:rgb(29, 41, 214)">Wang D*</strong>, & Ping P. Data-Driven Insights into the Association Between Oxidative Stress and Calcium-Regulating Proteins in Cardiovascular Disease. <i>Antioxidants (Basel)</i>. 2024; 13(11). PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/39594561/">39594561</a>. (* Corresponding author)
+                    </li>
+                    <li>
+                        Yan Y, Sankar BS, Mirza B, Ng DCM, Pelletier AR, Huang SD, Wang W, Watson K, <strong style="color:rgb(29, 41, 214)">Wang D</strong>, & Ping P. Missing Values in Longitudinal Proteome Dynamics Studies: Making a Case for Data Multiple Imputation. <i>J Proteome Res.</i> 2024; 23(9):4151-4162. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/39189460/">39189460</a>. 
+                    </li>
+                    <li>
+                        Yan Y, <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Xin R, Soriano RA, Ng DCM, Wang W, & Ping P. Protocol for the prediction, interpretation, and mutation evaluation of post-translational modification using MIND-S. <i>STAR Protocols (Cell Press).</i> 2023, 4, 102682. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/37979178/">37979178</a>. 
+                    </li>
+                    <li>
+                        Yan Y, Jiang JY, Fu M, <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Pelletier AR, Sigdel D, Ng DCM, Wang W, & Ping P. MIND-S is A Deep-Learning Prediction Model for Elucidating Protein Post-Translational Modifications in Human Diseases. <i>Cell Rep Methods.</i> 2023; 3(3):100430. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/37056379/">37056379</a>. 
+                    </li>
+                    <li>
+                        Chung NC, Choi H, <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Mirza B, Pelletier AR, Sigdel D, Wang W, & Ping P. Identifying temporal molecular signatures underlying cardiovascular diseases: A data science platform. <i>J Mol Cell Cardiol.</i> 2020;145:54-58. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/32504647/">32504647</a>. 
+                    </li>
+                    <li>
+                        Shanmugam G*, <strong style="color:rgb(29, 41, 214)">Wang D*</strong>, Gounder SS, Fernandes J, Litovsky SH, …, Abel ED, Jones DP, Ping P, & Rajasekaran NS. Reductive Stress Causes Pathological Cardiac Remodeling and Diastolic Dysfunction. <i>Antioxid Redox Signal.</i> 2020; 32(18):1293-1312. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/32064894/">32064894</a>. 
+                    </li>
+                    <li>
+                        Choi H, Simpson D, <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Prescott M, Pitsillides AA, Dudhia J, Clegg PD, Ping P, Thorpe CT. Heterogeneity of proteome dynamics between connective tissue phases of adult tendon. <i>Elife.</i> 2020; 9:e55262. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/32393437/">32393437</a>.
+                    </li>
+                    <li>
+                        Shanmugam G, Challa AK, Litovsky SH, Devarajan A, <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Jones DP, Darley-Usmar VM, Rajasekaran NS. Enhanced Keap1-Nrf2 signaling protects the myocardium from isoproterenol-induced pathological remodeling in mice. <i>Redox Biology.</i> 2019; 27:101212. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/31155513/">31155513</a>. 
+                    </li>
+                    <li>
+                        Chung NC, Mirza B, Choi H, Wang J, <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Ping P, Wang W. Unsupervised classification of multi-omics data during cardiac remodeling using deep learning. <i>Methods.</i> 2019; 166:66-73. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/30853547/">30853547</a>.
+                    </li>
+                    <li>
+                        Wang J, Choi H, Chung NC, Cao Q, Ng DCM, Mirza B, Scruggs SB, <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Garlid AO, & Ping P. Integrated Dissection of Cysteine Oxidative Post-Translational Modification Proteome During Cardiac Hypertrophy. <i>J Proteome Res.</i> 2018; 17(12):4243-4257. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/30141336/">30141336</a>.
+                    </li>
+                    <li>
+                        Lau E, Cao Q, Lam MPY, Wang J, Ng DCM, Bleakley BJ, Lee JM, Liem DA, <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Hermjakob H, & Ping P. Integrated omics dissection of proteome dynamics during cardiac remodeling. <i>Nature communications</i> 2018; 9(1):120. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/29317621/">29317621</a>.
+                    </li>
+                    <li>
+                        Lau E, Cao Q, Ng DC, Bleakley BJ, Dincer TU, Bot BM, <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Liem DA, Lam MP, Ge J, & Ping P. A large dataset of protein dynamics in the mammalian heart proteome. <i>Nature Sci Data.</i> 2016; 3:160015. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/26977904/">26977904</a>. 
+                    </li>
+                    <li>   
+                        Lam MP, Venkatraman V, Cao Q, <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Dincer TU, Lau E, Su AI, Xing Y, Ge J, Ping P, & Van Eyk JE. Prioritizing proteomics assay development for clinical translation. <i>J Am Coll Cardiol.</i> 2015; 66(2): 202-4. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/26160638/">26160638</a>. 
+                    </li>
+                    <li>
+                        Zong NC, Ping P, Lau E, Choi HJ, Ng DC, Meyer D, Fang C, Li H, <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Zelaya IM, Yates JR 3rd, & Lam MP. Lysine ubiquitination and acetylation of human cardiac 20S proteasomes. <i>Proteomics – Clinical Applications</i> 2014; 8(7-8), 590-4. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/24957502/">24957502</a>.
+                    </li>
+                    <li>
+                        <strong style="color:rgb(29, 41, 214)">Wang D*</strong>, Liem DA*, Lau E, Ng DC, Bleakley BJ, Cadeiras M, Deng MC, Lam MP, & Ping P. Characterization of human plasma proteome dynamics using deuterium oxide. <i>Proteomics – Clinical Applications</i> 2014; 8(7-8), 610-9. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/24946186/">24946186</a>.
+                    </li>
+                    <li>
+                        <strong style="color:rgb(29, 41, 214)">Wang D*</strong>, Lam MP*, Lau E*, Liem DA*, Kim AK, Ng DC, Liang X, Bleakley BJ, Liu C, Tabaraki JD, Cadeiras M, Wang Y, Deng MC, & Ping P. Protein kinetic signatures of the remodeling heart following isoproterenol stimulation. <i>J Clin Invest.</i> 2014; 124(4), 1734–1744. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/24614109/">24614109</a>. 
+                    </li>
+                    <li>
+                        <strong style="color:rgb(29, 41, 214)">Wang D*</strong>, Fang C*, Zong NC*, Liem DA, Cadeiras M, Scruggs SB, Yu H, Kim AK, Yang P, Deng M, Lu H, & Ping P. Regulation of acetylation restores proteolytic function of diseased myocardium in mouse and human. <i>Mol Cell Proteomics.</i> 2013; 12(12), 3793-802. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/24037710/">24037710</a>.
+                    </li>
+                    <li>
+                        Lam MP, Lau E, Scruggs SB, <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Kim TY, Liem DA, Zhang J, Ryan CM, Faull KF, & Ping P. Site-specific quantitative analysis of cardiac mitochondrial protein phosphorylation. <i>J Proteomics</i> 2013; 81, 15-23. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/23022582/">23022582</a>.
+                    </li>
+                    <li>
+                        <strong style="color:rgb(29, 41, 214)">Wang D*</strong>; Kim TY*; Kim AK*; Lau E*; Lin AJ; Liem DA; Zhang J; Zong NC; & Ping P. Metabolic labeling reveals proteome dynamics of mouse mitochondria. <i>Mol Cell Proteomics.</i> 2012; 11(12), 1586-94. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/22915825/">22915825</a>.
+                    </li>
+                    <li>
+                        <strong style="color:rgb(29, 41, 214)">Wang D*</strong>; Lau E*; Zhang J; Yu H, Kim TY, & Ping P. Substrate- and isoform-specific Proteome Stability in Normal and Stressed Mitochondria. <i>Circ Res.</i> 2012; 110(9), 1174-1178. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/22456183/">22456183</a>.
+                    </li>
+                    <li>
+                        Lam MPY, Scruggs S, Kim TY; Zong NC; Lau E, <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Ryan CM, Faull KF, & Ping P. An MRM-based Workflow for Quantifying Cardiac Mitochondrial Protein Phosphorylation in Murine and Human Tissue. <i>J Proteomics</i> 2012, 75(15), 4602-9. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/22387130/">22387130</a>.
+                    </li>
+                    <li>
+                        <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Zong Chenggong; Koag Myong-Chul; Wang, Yueju; Drews, Oliver; Fang, Caiyun; Scruggs Sarah; & Ping, Peipei. Proteome Dynamics and Proteome Function of Cardiac 19S Proteasomes. <i>Mol Cell Proteomics.</i> 2011; 10(5), M110.006122. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/21357515/">21357515</a>.
+                    </li>
+                    <li>
+                        <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Wood T, Sadilek M, Scott, CR, Turecek F, & Gelb MH. Tandem mass spectrometry for the direct assay of enzymes in dried blood spots: application to newborn screening for mucopolysaccharidosis II (Hunter disease). <i>Clin Chem.</i> 2007; 53(1), 137-140. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/17082248/">17082248</a>.
+                    </li>
+                    <li>
+                        <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Eadala B, Sadilek M, Chamoles NA, Turecek F, Scott CR, & Gelb MH. Tandem mass spectrometric analysis of dried blood spots for screening of mucopolysaccharidosis I in newborns. <i>Clin Chem.</i> 2005; 51(5), 898-900. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/15695324/">15695324</a>.
+                    </li>
+                    <li>
+                        <strong style="color:rgb(29, 41, 214)">Wang D</strong>, Xu J; Zhang Q; & Huang A. Regioselective Synthesis and Electron Impact Mass Spectral Fragmentation Differentiation of 2- or 3-isopropylthio, Phenylthiosuccinic Acid 4-Methyl/Isopropyl Ethers. <i>Rapid Commun Mass Spectrom.</i> 2000, 14(19), 1746-1750. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/11006581/">11006581</a>.
+                    </li>
+                </ul>
+                <p style="text-align: left; line-height: 1.7; margin-bottom: 16px; font-size: 18px; font-family: 'Lato', sans-serif;">
+                    I’m Ding Wang, a Project Scientist in the UCLA School of Medicine. My research work has been motivated by a deep curiosity 
+                    about <strong>how biosystems operate at the molecular level to render dynamic functions/phenotypes</strong> and how this knowledge can help us better 
+                    understand human health and disease. I began my scientific training at Peking University, where I earned my 
+                    BS and MS degrees in organic and analytical chemistry. I then completed my PhD at the University of Washington 
+                    with Dr. Michael Gelb, developing quantitative proteomics methods to analyze clinical samples used in newborn 
+                    screening for congenital disorders.
+                </p>
+
+                <p style="text-align: left; line-height: 1.7; margin-bottom: 16px; font-size: 18px; font-family: 'Lato', sans-serif;">
+                    My growing interest in omics-based biomedical research led me to UCLA for postdoctoral training with Dr. Peipei Ping. 
+                    There, I helped build advanced proteomics approaches to study cardiovascular disease in both patients and experimental 
+                    models. I later joined the faculty as a Project Scientist and have now spent more than a decade as a senior member of 
+                    the Ping research group. Over the years, I have developed expertise in proteomics, mitochondrial biology, redox 
+                    signaling, and cardiovascular disease, along with extensive experience in lab management, grant support, and 
+                    collaborative research.
+                </p>
+
+                <p style="text-align: left; line-height: 1.7; margin-bottom: 16px; font-size: 18px; font-family: 'Lato', sans-serif;">
+                    At UCLA, one of my major contributions has been helping develop a comprehensive proteomics pipeline that maps how 
+                    heart proteins change over time—capturing the molecular dynamics that shape both healthy and diseased states. Working 
+                    closely with data science colleagues and trainees, I’ve also helped create computational tools that reveal protein 
+                    structures, turnover rates, and responses to stress. Most recently, our team has incorporated deep-learning and AI 
+                    approaches to overcome key challenges in large-scale omics datasets and to predict how genetic variations, such as SNPs, 
+                    influence global patterns of protein post-translational modifications.
+                </p>
+
+                <p style="text-align: left; line-height: 1.7; font-size: 18px; font-family: 'Lato', sans-serif;">
+                    These combined efforts have resulted in more than 30 publications in journals including 
+                    <em>Nature Scientific Data</em>, <em>JCI</em>, <em>Circulation</em>, <em>Circulation Research</em>, and <em>eLife</em>, 
+                    along with a book chapter on mitochondrial apoptosis and autophagy.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+
+</div>
+
+
+
+
+
+<!-- ************** DROPDOWN SCRIPT ************** -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".dropdown").forEach(dropdown => {
+        const button = dropdown.querySelector(".toolbar-button");
+        const menu = dropdown.querySelector(".dropdown-content");
+
+        button.addEventListener("click", (e) => {
+            e.stopPropagation();
+            // Close other dropdowns
+            document.querySelectorAll(".dropdown-content").forEach(d => {
+                if (d !== menu) d.style.display = "none";
+            });
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        });
+    });
+
+    // Close all when clicking outside
+    document.addEventListener("click", () => {
+        document.querySelectorAll(".dropdown-content").forEach(d => {
+            d.style.display = "none";
+        });
+    });
+});
+</script>
+
+</body>
+</html>
