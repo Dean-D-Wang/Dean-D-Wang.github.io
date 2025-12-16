@@ -18,27 +18,29 @@
 
 <!-- HERO + TOOLBAR -->
 <div style="position: relative; width: 100%; height: 350px; margin-bottom: 30px;">
-    
-    <!-- Hero Image -->
-    <img src="/assets/hero_001.png" alt="Hero Image"
-         style="width:100%; height:100%; object-fit: cover; border-radius:8px;">
 
-    <!-- Toolbar (floating on top) -->
+    <!-- Hero Image (full-width) -->
+    <img src="/assets/hero_001.png" alt="Hero Image"
+         style="width:100%; height:100%; object-fit: cover; display:block;">
+
+    <!-- Toolbar (floating, full-width, semi-transparent white) -->
     <div class="toolbar" style="
         position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        background-color: rgba(25, 118, 210, 0.75); /* semi-transparent blue */
-        border-radius: 8px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+        color: #333;
+        border-radius: 0; /* remove rounded corners */
         padding: 8px 16px;
+        display: flex;
+        align-items: center;
         z-index: 10;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.25);
     ">
         <img width="40" alt="Training Logo"
              src="https://dean-d-wang.github.io/assets/Bridge2AI-TRM-WG.png">
-        <span>Welcome to Dean's Research Homepage</span>
+        <span style="color:#333;">Welcome to Dean's Research Homepage</span>
         <div class="spacer"></div>
 
         <!-- Social Icons -->
@@ -78,7 +80,7 @@
         transform: translateX(-50%);
         color: white;
         font-family: 'Oswald', sans-serif;
-        font-size: 48px;
+        font-size: 64px;
         text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
         margin: 0;
     ">Publications</h1>
@@ -134,9 +136,9 @@
             padding-right: 10px;">
 
             <!-- heading and long content -->
-            <h2 style="text-align: left; font-size: 32px; margin-bottom: 20px; font-family: 'Oswald', sans-serif;">
+            <!--<h2 style="text-align: left; font-size: 32px; margin-bottom: 20px; font-family: 'Oswald', sans-serif;">
                 Publications
-            </h2>
+            </h2> -->
             <!-- your long list stays untouched -->
             <h3 style="text-align: left; font-size: 24px; margin-bottom: 20px; font-family: 'Oswald', sans-serif;">
                 <u>Research Articles:</u>
