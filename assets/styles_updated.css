@@ -156,9 +156,9 @@ p { margin: 0; }
 
 .content {
     display: flex;
-    margin: 8 px auto 16px;
+    margin: 82px auto 32px;
     padding: 0 16px;
-    max-width: 1200px;
+    max-width: 960px;
     flex-direction: column;
     align-items: center;
 }
