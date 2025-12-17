@@ -3,9 +3,13 @@
         <title>Protein PTM Prediction by MIND-S</title>
         <meta charset="utf-8">
         <meta name="viewpoint" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
         
         <!-- Updated External CSS -->
         <link rel="stylesheet" type="text/css" href="https://Dean-D-Wang.github.io/assets/styles_updated.css"> 
+        <!-- Import Oswald and Lato fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+        
         <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
         <script src="/js/myScript09.js" defer></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
@@ -14,12 +18,93 @@
     </head>
 
     <body>
-        <!-- **************    Tool Bar    *************-->
+        <!-- HERO + TOOLBAR -->
+    <div style="position: relative; width: 100%; height: 350px; margin-bottom: 10px;">
+
+        <!-- Hero Image (full-width) -->
+        <img src="/assets/hero_001.png" alt="Hero Image"
+            style="width:100%; height:100%; object-fit: cover; display:block;">
+
+        <!-- Toolbar (floating, full-width, semi-transparent white) -->
+        <div class="toolbar" style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.25); /* semi-transparent white */
+            color: #4e4e4e;
+            border-radius: 0; /* remove rounded corners */
+            padding: 4px 16px; /* reduced vertical padding to shrink height */
+            display: flex;
+            align-items: center;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+        ">
+            <img width="48" alt="Training Logo"
+                src="https://dean-d-wang.github.io/assets/Bridge2AI-TRM-WG.png">
+            <span style="color: #838383;">Welcome to Dean's Research Homepage</span>
+            <div class="spacer"></div>
+
+            <!-- Social Icons -->
+            <a href="https://twitter.com/angular" target="_blank" rel="noopener"><svg id="twitter-logo" height="24">...</svg></a>
+            <a href="https://github.com/angular" target="_blank" rel="noopener"><svg id="github-logo" height="30" width="30">...</svg></a>
+            <a href="https://youtube.com/angular" target="_blank" rel="noopener"><svg id="youtube-logo" height="24" width="24">...</svg></a>
+
+            <!-- Dropdowns -->
+            <div class="dropdown">
+                <button class="toolbar-button">Projects ▼</button>
+                <div class="dropdown-content">
+                    <a href="/protein-turnovers/index_01.html">Protein Turnovers</a>
+                    <a href="/ptm-predictions/index_02.html">PTM Predictions</a>
+                    <a href="/mentor-mentee-network/index_03.html">Bridge2AI Network</a>
+                    <a href="/CFDE-digital-assets/index_08.html">CFDE Datasets</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="toolbar-button">Portfolio ▼</button>
+                <div class="dropdown-content">
+                    <a href="/scientific-visualization/index_05.html">Scientific Visualization</a>
+                    <a href="/promotion-materials/index_06.html">Promotion Materials</a>
+                    <a href="/webdesign/index_07.html">Website Design</a>
+                </div>
+            </div>
+
+            <!-- Publications and Home -->
+            <button onclick="location.href='/publications/index_04.html'" class="toolbar-button">Publications</button>
+            <button onclick="location.href='/index.html'" class="toolbar-button" style="margin-right: 16px;">Home</button>
+
+        </div>
+        <!-- Hero Title (moved closer to vertical center) -->
+        <h1 style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;              /* ⬅ expand title width */
+            max-width: 1200px;       /* ⬅ prevent over-stretching */
+            color: rgb(252, 190, 21);
+            font-family: 'Oswald', sans-serif;
+            font-size: 56px;
+            text-align: left;      /* ⬅ keeps it clean */
+            line-height: 1.5;
+            white-space: normal;     /* ⬅ allow wrapping */
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            margin: 0;
+        ">
+            MIND-S: A Deep-Learning Prediction Model<br>
+            for Elucidating Protein PTMs in Human Diseases
+        </h1>
         
+
+
+        
+        <!-- **************    Tool Bar    ************* -->
+        <!--
         <div class="toolbar" role="banner">
             <img width="40" alt="Training Logo"
                 src="https://dean-d-wang.github.io/assets/Bridge2AI-TRM-WG.png">
-            <!-- src="https://www.pngfind.com/pngs/m/294-2944006_redfin-logo-png-research-house-icon-transparent-png.png" /> -->
+            
             <span>Computational Prediction of Protein PTMs via MIND-S</span>
         
             <div class="spacer"></div>
@@ -50,7 +135,7 @@
                 </svg>
             </a>
 
-            <!-- PROJECTS DROPDOWN -->
+         
             <div class="dropdown" style="margin-left:20px;">
                 <button id="dropdownBtn" class="dropdown-button">Projects</button>
         
@@ -60,7 +145,7 @@
                 </div>
             </div>
         
-            <!-- HOME BUTTON -->
+           
             <button onclick="location.href='/index.html'"
                     class="toolbar-button"
                     style="margin-left:20px;">
@@ -69,7 +154,7 @@
 
             
             
-        </div>
+        </div> -->
 
         <div class="content" role="main"></div>
         <h3 style = "color: darkcyan"> Lollipop Graphs for Protein PTM Predictions:</h3>
