@@ -155,38 +155,65 @@
                 </h2>
 
                 <!-- Body text in Lato -->
-                <p style="text-align: left; line-height: 1.7; margin-bottom: 16px; font-size: 18px; font-family: 'Lato', sans-serif;">
-                    I’m Ding Wang, a Project Scientist in the UCLA School of Medicine. My research work has been motivated by a deep curiosity 
-                    about <strong>how biosystems operate at the molecular level to render dynamic functions/phenotypes</strong> and how this knowledge can help us better 
-                    understand human health and disease. I began my scientific training at Peking University, where I earned my 
-                    BS and MS degrees in organic and analytical chemistry. I then completed my PhD at the University of Washington 
-                    with Dr. Michael Gelb, developing quantitative proteomics methods to analyze clinical samples used in newborn 
-                    screening for congenital disorders.
-                </p>
+                <div id="about-me-text">
+                    <!-- VISIBLE FIRST 2 Paragraphs -->
+                    
+                    <p style="text-align: left; line-height: 1.7; margin-bottom: 16px; font-size: 18px; font-family: 'Lato', sans-serif;">
+                        I’m Ding Wang, a Project Scientist in the UCLA School of Medicine. My research work has been motivated by a deep curiosity 
+                        about <strong>how biosystems operate at the molecular level to render dynamic functions/phenotypes</strong> and how this knowledge can help us better 
+                        understand human health and disease. I began my scientific training at Peking University, where I earned my 
+                        BS and MS degrees in organic and analytical chemistry. I then completed my PhD at the University of Washington 
+                        with Dr. Michael Gelb, developing quantitative proteomics methods to analyze clinical samples used in newborn 
+                        screening for congenital disorders.
+                    </p>
 
-                <p style="text-align: left; line-height: 1.7; margin-bottom: 16px; font-size: 18px; font-family: 'Lato', sans-serif;">
-                    My growing interest in omics-based biomedical research led me to UCLA for postdoctoral training with Dr. Peipei Ping. 
-                    There, I helped build advanced proteomics approaches to study cardiovascular disease in both patients and experimental 
-                    models. I later joined the faculty as a Project Scientist and have now spent more than a decade as a senior member of 
-                    the Ping research group. Over the years, I have developed expertise in proteomics, mitochondrial biology, redox 
-                    signaling, and cardiovascular disease, along with extensive experience in lab management, grant support, and 
-                    collaborative research.
-                </p>
+                    <p style="text-align: left; line-height: 1.7; margin-bottom: 16px; font-size: 18px; font-family: 'Lato', sans-serif;">
+                        My growing interest in omics-based biomedical research led me to UCLA for postdoctoral training with Dr. Peipei Ping. 
+                        There, I helped build advanced proteomics approaches to study cardiovascular disease in both patients and experimental 
+                        models. I later joined the faculty as a Project Scientist and have now spent more than a decade as a senior member of 
+                        the Ping research group. Over the years, I have developed expertise in proteomics, mitochondrial biology, redox 
+                        signaling, and cardiovascular disease, along with extensive experience in lab management, grant support, and 
+                        collaborative research.
+                    </p>
 
-                <p style="text-align: left; line-height: 1.7; margin-bottom: 16px; font-size: 18px; font-family: 'Lato', sans-serif;">
-                    At UCLA, one of my major contributions has been helping develop a comprehensive proteomics pipeline that maps how 
-                    heart proteins change over time—capturing the molecular dynamics that shape both healthy and diseased states. Working 
-                    closely with data science colleagues and trainees, I’ve also helped create computational tools that reveal protein 
-                    structures, turnover rates, and responses to stress. Most recently, our team has incorporated deep-learning and AI 
-                    approaches to overcome key challenges in large-scale omics datasets and to predict how genetic variations, such as SNPs, 
-                    influence global patterns of protein post-translational modifications.
-                </p>
+                    <!-- HIDDEN CONTENT -->
+                    <div id="about-me-more-text1" style="display: none;">
+                        <p style="text-align: left; line-height: 1.7; margin-bottom: 16px; font-size: 18px; font-family: 'Lato', sans-serif;">
+                            At UCLA, one of my major contributions has been helping develop a comprehensive proteomics pipeline that maps how 
+                            heart proteins change over time—capturing the molecular dynamics that shape both healthy and diseased states. Working 
+                            closely with data science colleagues and trainees, I’ve also helped create computational tools that reveal protein 
+                            structures, turnover rates, and responses to stress. Most recently, our team has incorporated deep-learning and AI 
+                            approaches to overcome key challenges in large-scale omics datasets and to predict how genetic variations, such as SNPs, 
+                            influence global patterns of protein post-translational modifications.
+                        </p>
 
-                <p style="text-align: left; line-height: 1.7; font-size: 18px; font-family: 'Lato', sans-serif;">
-                    These combined efforts have resulted in more than 30 publications in journals including 
-                    <em>Nature Scientific Data</em>, <em>JCI</em>, <em>Circulation</em>, <em>Circulation Research</em>, and <em>eLife</em>, 
-                    along with a book chapter on mitochondrial apoptosis and autophagy.
-                </p>
+                        <p style="text-align: left; line-height: 1.7; font-size: 18px; font-family: 'Lato', sans-serif;">
+                            These combined efforts have resulted in more than 30 publications in journals including 
+                            <em>Nature Scientific Data</em>, <em>JCI</em>, <em>Circulation</em>, <em>Circulation Research</em>, and <em>eLife</em>, 
+                            along with a book chapter on mitochondrial apoptosis and autophagy.
+                        </p>
+                    </div>
+
+                    <!-- READ MORE BUTTON -->
+                    <button id="read-more-btn1"
+                        style="
+                            background: #f0f0f0;
+                            border: 1px solid #aaa;
+                            padding: 8px 14px;
+                            font-size: 14px;
+                            border-radius: 6px;
+                            cursor: pointer;
+                            font-family: 'Lato', sans-serif;
+                            transition: background 0.2s;
+                        "
+                        onmouseover="this.style.background='#e0e0e0'"
+                        onmouseout="this.style.background='#f0f0f0'"
+                        onclick="document.getElementById('more-text1').style.display='block'; this.style.display='none';">
+                        Read More
+                    </button>
+                </div>    
+                
+
 
                 <div style="width: 100%; height: 4px; background-color: #dae5f5; margin: 40px 0;"></div>
 
