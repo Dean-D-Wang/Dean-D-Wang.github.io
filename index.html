@@ -105,15 +105,17 @@
         
         
         <section id="about-me-section" style="max-width: 1640px; margin: 0 auto; padding: 10px; 
-            height: 100vh; overflow: hidden;">   <!-- Important to keep the left column in a fixed position while right column swipe up and down-->
+            height: 100vh;">   
+            
+            <!-- Important to keep the left column in a fixed position while right column swipe up and down-->
 
             <div style="display: flex; gap: 30px; align-items: flex-start; height: 100%;">
 
-                <!-- LEFT COLUMN: Photo + Contact; (sticky)-->
+                <!-- LEFT COLUMN: Photo + Contact; Position:(sticky)-->
                 <div style="
                     flex: 0 0 320px; 
                     text-align: left;
-                    position:sticky;
+                    position:sticky; 
                     top:20px;
                     align-self:flex-start">
 
@@ -138,7 +140,7 @@
 
                 </div>
 
-                <!-- RIGHT COLUMN: About Me Text (Scrollable) -->
+                <!-- RIGHT COLUMN: About Me Text; Overflow: auto (Scrollable) -->
                 <div style="
                     flex: 2.0;
                     overflow-y: auto;
